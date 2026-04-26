@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Affectra &middot; PII Exposure Self-Check</title>
+    <link rel="icon" type="image/png" href="/static/Assets/Logo/Affectra%20Logo.png" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  </head>
+  <body>
+    <!-- splash screen -->
+    <div id="splash" class="splash" role="status" aria-live="polite">
+      <div class="splash-inner">
+        <div class="splash-brand">
+          <img
+            src="/static/Assets/Logo/Affectra%20Logo.png"
+            alt="Affectra"
+            class="splash-logo-img"
+          />
+          <p class="splash-tagline">PII exposure self-check</p>
+        </div>
+
+        <ul class="splash-checks" id="splash-checks">
+          <li data-check="core" class="pending">
+            <span class="sc-icon"></span>
+            <span class="sc-label">Verifying core files</span>
+            <span class="sc-status">…</span>
+          </li>
+          <li data-check="backend" class="pending">
+            <span class="sc-icon"></span>
+            <span class="sc-label">Contacting backend server</span>
+            <span class="sc-status">…</span>
+          </li>
+          <li data-check="keys" class="pending">
+            <span class="sc-icon"></span>
+            <span class="sc-label">Loading API keys</span>
+            <span class="sc-status">…</span>
+          </li>
+          <li data-check="external" class="pending">
+            <span class="sc-icon"></span>
+            <span class="sc-label">Reaching external APIs</span>
+            <span class="sc-status">…</span>
+          </li>
+          <li data-check="internal" class="pending">
+            <span class="sc-icon"></span>
+            <span class="sc-label">Booting internal API modules</span>
+            <span class="sc-status">…</span>
+          </li>
+          <li data-check="scanner" class="pending">
+            <span class="sc-icon"></span>
+            <span class="sc-label">Initializing scanner engine</span>
+            <span class="sc-status">…</span>
+          </li>
+        </ul>
+
+        <div class="splash-progress" aria-hidden="true">
+          <div class="splash-progress-bar" id="splash-progress-bar"></div>
+        </div>
+
+        <p class="splash-footnote" id="splash-footnote">
+          Initialising…
+        </p>
+
+        <button
+          id="splash-continue"
+          class="btn btn-primary splash-continue hidden"
+          type="button"
+        >
+          Enter Affectra
+        </button>
+      </div>
+    </div>
+
+    <!-- main app -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <img
+          src="/static/Assets/Logo/Affectra%20Logo.png"
+          alt="Affectra"
+          class="brand-logo-img"
+        />
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+          <button class="main-nav-btn active" data-page="scan">Exposure Scan</button>
+          <button class="main-nav-btn" data-page="history">History</button>
+          <button class="main-nav-btn" data-page="status">Status</button>
+          <button class="main-nav-btn" data-page="evaluation">Evaluation</button>
+          <button class="main-nav-btn" data-page="settings">Settings</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ── Page: Exposure Scan ── -->
+      <div id="page-scan" class="page-view active">
+
+      <section id="scan" class="card scan-card">
+        <div class="card-header">
+          <h2>Run a new exposure scan</h2>
+          <p class="muted">
+            Enter any identifier you want to check &mdash; a single field such
+            as only an email or only a name is enough. All fields are optional
+            and can be combined for a more precise scan. Inputs are normalized
+            and validated before any detection runs.
+          </p>
+        </div>
+
+        <form id="scan-form" class="scan-form">
+          <div class="grid grid-2">
+            <label class="field">
+              <span>Email address</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="off"
+              />
+            </label>
+            <label class="field">
+              <span>Full name</span>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Enter your full name"
+                autocomplete="off"
+              />
+            </label>
+            <label class="field">
+              <span>Phone number</span>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                autocomplete="off"
+              />
+            </label>
+            <label class="field">
+              <span
+                >Usernames
+                <span class="muted small">(comma separated)</span></span
+              >
+              <input
+                type="text"
+                name="usernames"
+                placeholder="Enter your username(s)"
+                autocomplete="off"
+              />
+            </label>
+          </div>
+
+          <fieldset class="mode-row">
+            <legend>Scan mode</legend>
+            <label class="radio">
+              <input type="radio" name="scan_mode" value="API_ONLY" />
+              <span
+                >API only
+                <span class="muted small">(fastest baseline)</span></span
+              >
+            </label>
+            <label class="radio">
+              <input
+                type="radio"
+                name="scan_mode"
+                value="HYBRID"
+                checked
+              />
+              <span
+                >Hybrid
+                <span class="muted small">(recommended)</span></span
+              >
+            </label>
+            <label class="radio">
+              <input type="radio" name="scan_mode" value="DEEP_SCAN" />
+              <span
+                >Deep scan
+                <span class="muted small">(more sources)</span></span
+              >
+            </label>
+            <label class="radio">
+              <input
+                type="radio"
+                name="scan_mode"
+                value="EXTENDED_EXPLORATION"
+              />
+              <span
+                >Extended exploration
+                <span class="muted small">(recursive expansion)</span></span
+              >
+            </label>
+            <label class="radio">
+              <input type="radio" name="scan_mode" value="COMPARE" />
+              <span>Compare all modes</span>
+            </label>
+          </fieldset>
+
+          <div class="captcha-row">
+            <div
+              class="h-captcha"
+              id="hcaptcha-widget"
+              data-sitekey="fbf42a8e-4d46-4fca-a268-60f0e6d86d74"
+              data-theme="light"
+            ></div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              Run scan
+            </button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+            <span id="form-error" class="form-error" role="alert"></span>
+          </div>
+        </form>
+      </section>
+
+      <section id="results" class="card results-card hidden">
+        <div class="card-header summary-header">
+          <div class="summary-header-left">
+            <h2>Scan results</h2>
+            <p class="muted" id="results-meta"></p>
+            <div class="summary-pills" id="summary-pills"></div>
+          </div>
+          <div id="hygiene-gauge" class="hygiene-gauge hidden" aria-label="Digital Hygiene Score">
+            <svg viewBox="0 0 80 80" class="hygiene-dial" aria-hidden="true">
+              <circle cx="40" cy="40" r="32" fill="none" stroke="var(--surface-line)" stroke-width="8"/>
+              <circle cx="40" cy="40" r="32" fill="none" stroke="currentColor"
+                      stroke-width="8" stroke-linecap="round"
+                      stroke-dasharray="201.06" stroke-dashoffset="201.06"
+                      id="hygiene-arc" transform="rotate(-90 40 40)"/>
+            </svg>
+            <div class="hygiene-text">
+              <span class="hygiene-num" id="hygiene-num">—</span>
+              <span class="hygiene-label">Hygiene<br>Score</span>
+            </div>
+            <button id="hygiene-info-btn" class="hygiene-info-btn" aria-label="What does this score mean?" title="What does this mean?">?</button>
+          </div>
+
+          <!-- Hygiene Score explanation modal -->
+          <div id="hygiene-modal" class="hygiene-modal hidden" role="dialog" aria-modal="true" aria-labelledby="hygiene-modal-title">
+            <div class="hygiene-modal-box">
+              <div class="hygiene-modal-header">
+                <h3 id="hygiene-modal-title">Digital Hygiene Score</h3>
+                <button id="hygiene-modal-close" class="hygiene-modal-close" aria-label="Close">&#x2715;</button>
+              </div>
+              <p class="hygiene-modal-intro">Your hygiene score reflects how exposed your personal data is online. It is calculated as <strong>100 minus your overall risk score</strong> — the higher, the cleaner.</p>
+              <div class="hygiene-ranges">
+                <div class="hygiene-range hg-excellent">
+                  <span class="hg-range-badge">80 – 100</span>
+                  <div>
+                    <strong>Excellent</strong>
+                    <p>Minimal digital footprint. Your data appears in very few or no sources. No immediate action required.</p>
+                  </div>
+                </div>
+                <div class="hygiene-range hg-good">
+                  <span class="hg-range-badge">65 – 79</span>
+                  <div>
+                    <strong>Good</strong>
+                    <p>Low exposure. A small number of sources contain your data. Consider reviewing and removing unnecessary accounts.</p>
+                  </div>
+                </div>
+                <div class="hygiene-range hg-ok">
+                  <span class="hg-range-badge">35 – 64</span>
+                  <div>
+                    <strong>Fair</strong>
+                    <p>Moderate exposure. Your data appears across several sources. Review the findings and take targeted action on high-risk items.</p>
+                  </div>
+                </div>
+                <div class="hygiene-range hg-poor">
+                  <span class="hg-range-badge">15 – 34</span>
+                  <div>
+                    <strong>Poor</strong>
+                    <p>High exposure. Significant amounts of your personal data are publicly accessible. Prompt action is recommended.</p>
+                  </div>
+                </div>
+                <div class="hygiene-range hg-critical">
+                  <span class="hg-range-badge">0 – 14</span>
+                  <div>
+                    <strong>Critical</strong>
+                    <p>Severe exposure. Your data is widely available and at high risk of misuse. Immediate action is strongly advised.</p>
+                  </div>
+                </div>
+              </div>
+              <p class="hygiene-modal-note">Scores are recalculated on every scan. Running a deeper scan mode (e.g. Deep Scan or Extended Exploration) may surface additional findings and adjust your score.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="ai-summary" class="ai-summary-block hidden"></div>
+
+        <div id="comparison-block" class="comparison hidden"></div>
+
+        <!-- Exposure graph — shown after a scan with results -->
+        <div id="graph-section" class="graph-section hidden">
+          <div class="graph-header" id="graph-toggle" role="button" tabindex="0"
+               aria-expanded="false" aria-controls="graph-canvas-wrap">
+            <span class="graph-title">Exposure graph</span>
+            <span class="graph-chev">▸</span>
+          </div>
+          <div id="graph-canvas-wrap" class="graph-canvas-wrap" hidden>
+            <div class="graph-legend">
+              <span class="gl-dot gl-identifier"></span><span>Identifier</span>
+              <span class="gl-dot gl-critical"></span><span>Critical</span>
+              <span class="gl-dot gl-high"></span><span>High</span>
+              <span class="gl-dot gl-medium"></span><span>Medium</span>
+              <span class="gl-dot gl-low"></span><span>Low</span>
+              <span class="gl-dot gl-category"></span><span>Category</span>
+            </div>
+            <div id="exposure-graph" class="exposure-graph"></div>
+          </div>
+        </div>
+
+        <div class="exposure-toolbar hidden" id="exposure-toolbar">
+          <div class="toolbar-left">
+            <label class="field field-inline">
+              <span class="muted small">Page size</span>
+              <select id="page-size">
+                <option value="10" selected>10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </label>
+            <button type="button" class="btn btn-ghost btn-small" id="expand-all">
+              Expand all
+            </button>
+            <button type="button" class="btn btn-ghost btn-small" id="collapse-all">
+              Collapse all
+            </button>
+          </div>
+          <div class="toolbar-right">
+            <span id="exposure-count" class="muted small"></span>
+          </div>
+        </div>
+
+        <div id="exposure-list" class="exposure-list"></div>
+
+        <nav id="pagination" class="pagination hidden" aria-label="Result pages"></nav>
+
+        <div id="empty-state" class="empty-state hidden">
+          <h3>No public exposures detected</h3>
+          <p class="muted">
+            Nothing matched against the configured public sources. Re-run
+            with additional identifiers for a wider sweep.
+          </p>
+        </div>
+      </section>
+
+      </div><!-- /page-scan -->
+
+      <!-- ── Page: History ── -->
+      <div id="page-history" class="page-view">
+        <aside id="history-panel" class="devmenu" role="region" aria-label="Scan History">
+
+          <!-- Tabs — same devmenu-tabs style as settings -->
+          <nav class="devmenu-tabs" role="tablist">
+            <button class="devmenu-tab active" data-htab="scans"    role="tab" aria-selected="true">All Scans</button>
+            <button class="devmenu-tab"        data-htab="profiles" role="tab" aria-selected="false">Profiles</button>
+          </nav>
+
+          <div class="devmenu-body">
+
+            <!-- All Scans panel -->
+            <section class="devmenu-tabpanel active" data-hpanel="scans">
+              <div class="history-panel-header">
+                <p class="muted small">All scans saved to the server. Re-run any scan to check your current exposure.</p>
+                <button id="history-clear-all" class="btn btn-ghost btn-sm">Clear all</button>
+              </div>
+              <div id="history-list"></div>
+            </section>
+
+            <!-- Profiles panel -->
+            <section class="devmenu-tabpanel" data-hpanel="profiles">
+              <p class="muted small">Scans grouped by identifier — track how your exposure changes over time.</p>
+              <div id="history-profiles"></div>
+            </section>
+
+          </div>
+        </aside>
+      </div>
+
+      <!-- ── Page: Evaluation ── -->
+      <div id="page-evaluation" class="page-view">
+
+        <!-- Section 1: Coverage Comparison -->
+        <section class="card eval-card">
+          <div class="card-header">
+            <div>
+              <h2>Coverage comparison</h2>
+              <p class="muted">Runs all four scan modes against the same input and measures how much coverage each mode adds over the API-only baseline.</p>
+            </div>
+          </div>
+          <form id="eval-compare-form" class="scan-form">
+            <div class="grid grid-2">
+              <label class="field">
+                <span>Email address</span>
+                <input type="email" name="eval_email" placeholder="Enter email to test" autocomplete="off"/>
+              </label>
+              <label class="field">
+                <span>Full name</span>
+                <input type="text" name="eval_name" placeholder="Enter full name" autocomplete="off"/>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="eval-compare-btn">Run comparison</button>
+              <span id="eval-compare-error" class="form-error" role="alert"></span>
+            </div>
+          </form>
+          <div id="eval-compare-result" class="eval-result hidden"></div>
+        </section>
+
+        <!-- Section 2: False Positive Rate -->
+        <section class="card eval-card">
+          <div class="card-header">
+            <div>
+              <h2>False positive rate</h2>
+              <p class="muted">Scans a set of fabricated, RFC-reserved identifiers that cannot belong to any real person. Every finding returned is a false positive by construction.</p>
+            </div>
+          </div>
+          <div class="eval-methodology">
+            <strong>Test identifiers</strong>
+            <ul class="eval-list">
+              <li><code>clean.test.affectra.9x@nonexistent.invalid</code> — RFC 2606 reserved TLD</li>
+              <li><code>Zxqvbn Qrstuvwx Noreality</code> — nonsense full name</li>
+              <li><code>affectratestclean9xyzqw</code> — random username string</li>
+            </ul>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary" id="eval-fpr-btn">Run FPR test</button>
+            <span class="muted small">Takes ~30s — runs live API calls</span>
+          </div>
+          <div id="eval-fpr-result" class="eval-result hidden"></div>
+        </section>
+
+        <!-- Section 3: Risk Scoring Sensitivity -->
+        <section class="card eval-card">
+          <div class="card-header">
+            <div>
+              <h2>Risk scoring sensitivity</h2>
+              <p class="muted">Re-scores your last scan's findings with conservative (−20%), balanced (default), and aggressive (+20%) weight sets to show how much the score depends on parameter choice.</p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary" id="eval-sensitivity-btn">Analyse last scan</button>
+            <span id="eval-sensitivity-hint" class="muted small">Run a scan first to enable this.</span>
+          </div>
+          <div id="eval-sensitivity-result" class="eval-result hidden"></div>
+        </section>
+
+      </div><!-- /page-evaluation -->
+
+      <!-- ── Page: Status ── -->
+      <div id="page-status" class="page-view">
+
+      <section id="system" class="card system-card">
+        <div class="card-header summary-header">
+          <div>
+            <h2>System status</h2>
+            <p class="muted">
+              Live view of key configuration, adapter readiness, and internal
+              module health.
+            </p>
+          </div>
+          <button id="refresh-status-btn" type="button" class="btn btn-ghost btn-small">
+            ↻ Refresh
+          </button>
+        </div>
+        <div id="system-grid" class="system-grid">
+          <p class="muted small">Loading…</p>
+        </div>
+      </section>
+
+      </div><!-- /page-status -->
+
+      <!-- ── Page: Settings ── -->
+      <div id="page-settings" class="page-view">
+
+      <aside
+        id="devmenu"
+        class="devmenu"
+        role="region"
+        aria-label="Settings"
+      >
+        <header class="devmenu-header">
+          <h3 id="devmenu-title">Settings</h3>
+        </header>
+
+        <nav class="devmenu-tabs" role="tablist">
+          <button class="devmenu-tab active" data-tab="theme" role="tab">Theme</button>
+          <button class="devmenu-tab" data-tab="services" role="tab">Services</button>
+          <button class="devmenu-tab" data-tab="precision" role="tab">Precision</button>
+          <button class="devmenu-tab" data-tab="limits" role="tab">Scan Limits</button>
+          <button class="devmenu-tab" data-tab="keys" role="tab">API Keys</button>
+        </nav>
+
+        <div class="devmenu-body">
+          <!-- Theme tab -->
+          <section class="devmenu-tabpanel active" data-tabpanel="theme">
+            <p class="muted small">
+              Pick a theme. Changes apply instantly and persist across restarts.
+            </p>
+            <div id="theme-picker" class="theme-picker"></div>
+          </section>
+
+          <!-- Services tab -->
+          <section class="devmenu-tabpanel" data-tabpanel="services">
+            <p class="muted small">
+              Toggle individual adapters. Disabled services are skipped and
+              logged in scan errors for transparency.
+            </p>
+            <div id="service-toggles" class="service-toggles"></div>
+          </section>
+
+          <!-- Precision tab -->
+          <section class="devmenu-tabpanel" data-tabpanel="precision">
+            <p class="muted small">
+              Strictness filters cut adapter false-positives. Disable only if
+              you want to see every loose match the API returns.
+            </p>
+            <label class="switch-row">
+              <input type="checkbox" id="flag-strict-stack" />
+              <span>
+                <strong>Tighten Stack Exchange precision</strong>
+                <span class="muted small">
+                  Keep a profile only when display_name exactly matches the
+                  target, or website/link contains the target email/username.
+                </span>
+              </span>
+            </label>
+            <label class="switch-row">
+              <input type="checkbox" id="flag-strict-github" />
+              <span>
+                <strong>Tighten GitHub precision</strong>
+                <span class="muted small">
+                  Keep a profile only when login / email / blog / bio /
+                  name ties back to the target.
+                </span>
+              </span>
+            </label>
+            <label class="switch-row switch-row-input">
+              <span>
+                <strong>Per-service findings cap</strong>
+                <span class="muted small">
+                  Maximum rows a single adapter can contribute. 0 disables.
+                </span>
+              </span>
+              <input
+                type="number"
+                id="flag-per-service-cap"
+                min="0"
+                max="100"
+                step="1"
+              />
+            </label>
+          </section>
+
+          <!-- Mode limits tab -->
+          <section class="devmenu-tabpanel" data-tabpanel="limits">
+            <p class="muted small">
+              Override per-mode scan budgets. Changes apply to the next scan.
+              Leave a field at its default to restore the original behaviour.
+            </p>
+            <div id="mode-limits"></div>
+          </section>
+
+          <!-- API Keys tab -->
+          <section class="devmenu-tabpanel" data-tabpanel="keys">
+            <p class="muted small">
+              Set runtime API-key overrides. Stored locally, never logged.
+              Leave blank to fall back to environment variables.
+            </p>
+            <div id="key-editors" class="key-editors"></div>
+          </section>
+        </div>
+
+        <footer class="devmenu-footer">
+          <span id="devmenu-status" class="muted small"></span>
+        </footer>
+      </aside>
+
+      </div><!-- /page-settings -->
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <img
+            src="/static/Assets/Logo/Affectra%20Logo.png"
+            alt="Affectra"
+            class="footer-logo"
+          />
+          <p class="footer-desc">
+            Affectra is a PII exposure self-check platform built for Final Year
+            Project at the University of Hertfordshire. It scans public internet
+            sources to surface where your personal data may be exposed — and
+            tells you what to do about it.
+          </p>
+          <div class="footer-links">
+            <a href="#" id="about-link" class="footer-link">About Affectra</a>
+            <span class="footer-link-sep">&middot;</span>
+            <span class="footer-link footer-legal">
+              Only scan identifiers you own &middot; GDPR-aware
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact column -->
+        <div class="footer-contact">
+          <h4 class="footer-contact-heading">Contact</h4>
+          <p class="footer-contact-name">Abdul Haseeb Amir</p>
+          <ul class="footer-contact-list">
+            <li>Student ID: 24106309</li>
+            <li>University of Hertfordshire</li>
+            <li>BSc Computer Science</li>
+            <li>
+              <a href="mailto:haseeb.edu.7@gmail.com" class="footer-email">
+                haseeb.edu.7@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p>
+            Affectra &mdash; designed and built by
+            <strong>Abdul Haseeb Amir</strong> for <a href="https://herts.instructure.com/courses/126511" target="_blank" rel="noopener noreferrer" class="footer-link">Final Year Project</a> &middot;
+            University of Hertfordshire &middot; BSc Computer Science
+            &middot; 2026
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- consent modal — shown before every scan -->
+    <div
+      id="consent-overlay"
+      class="consent-overlay hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="consent-title"
+    >
+      <div class="consent-modal">
+        <h3 id="consent-title">Your data only, please</h3>
+        <p>
+          Affectra is built for checking your own digital footprint.
+          Scanning someone else's personal information without their
+          consent is a violation of their privacy and may be unlawful.
+        </p>
+        <p class="consent-confirm-text">
+          Please confirm that everything you've entered belongs to you.
+        </p>
+        <div class="consent-actions">
+          <button type="button" class="btn btn-primary" id="consent-confirm">
+            This is my own data — continue
+          </button>
+          <button type="button" class="btn btn-ghost" id="consent-cancel">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- About modal -->
+    <div
+      id="about-overlay"
+      class="about-overlay hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="about-title"
+    >
+      <div class="about-modal">
+        <button id="about-close" class="about-close" aria-label="Close About">&times;</button>
+
+        <div class="about-logo-row">
+          <img src="/static/Assets/Logo/Affectra%20Logo.png" alt="Affectra" class="about-logo-img" />
+        </div>
+
+        <h2 id="about-title">About Affectra</h2>
+
+        <section class="about-section">
+          <h3>What is Affectra?</h3>
+          <p>
+            Affectra is an open-source PII (Personally Identifiable Information)
+            exposure self-check platform. It allows individuals to discover where
+            their personal data appears across the public internet — including
+            data breach databases, paste sites, code repositories, social
+            platforms, public directories, and archived web pages. It was
+            designed and built as a Final Year Project at the University of
+            Hertfordshire by Abdul Haseeb Amir (BSc Computer Science, 2026).
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h3>What is PII?</h3>
+          <p>
+            <strong>Personally Identifiable Information (PII)</strong> is any
+            data that can be used — alone or in combination — to identify a
+            specific person. Common examples include:
+          </p>
+          <ul class="about-list">
+            <li><strong>Email addresses</strong> — unique identifiers used to register on almost every online service</li>
+            <li><strong>Full names</strong> — can be correlated across platforms to build a profile</li>
+            <li><strong>Phone numbers</strong> — often exposed in data broker listings and leaked databases</li>
+            <li><strong>Usernames</strong> — link activity across forums, social media, and code repositories</li>
+            <li><strong>Passwords (hashed or plain)</strong> — the most critical exposure: one leak can compromise many accounts</li>
+            <li><strong>Location data, employer, date of birth</strong> — common in data broker and public directory listings</li>
+          </ul>
+          <p>
+            When PII is exposed without consent — through data breaches, careless
+            posting, or commercial data brokers — it can lead to identity theft,
+            phishing attacks, account takeovers, and stalking. The GDPR (General
+            Data Protection Regulation) and CCPA (California Consumer Privacy Act)
+            give individuals the legal right to request removal of their data.
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h3>How does Affectra work?</h3>
+          <p>
+            Affectra runs a multi-stage detection pipeline against 12 public
+            intelligence sources. A scan works in four steps:
+          </p>
+          <ol class="about-list">
+            <li>
+              <strong>Query normalisation</strong> — your input (email, name,
+              phone, usernames) is cleaned, validated, and standardised before
+              any external call is made.
+            </li>
+            <li>
+              <strong>External API layer</strong> — specialised adapters query
+              breach databases (XposedOrNot, HIBP), paste indexers (Psbdmp),
+              social platforms (Gravatar, Holehe, Stack Exchange),
+              code hosts (GitHub), and historical web archives (Wayback
+              Machine, URLScan, crt.sh). Search engine dorks (DuckDuckGo) and
+              an ethical web scraper cover long-tail exposures.
+            </li>
+            <li>
+              <strong>Internal API pipeline</strong> — raw findings are
+              normalised, deduplicated, classified into exposure categories
+              (breach, paste, data broker, forum mention, etc.), scored for
+              confidence and risk, and enriched with actionable mitigation steps.
+            </li>
+            <li>
+              <strong>AI analysis</strong> — findings are optionally sent to
+              Google Gemini, which generates plain-English threat commentary
+              and finding-specific remediation actions tailored to exactly what
+              was found.
+            </li>
+          </ol>
+        </section>
+
+        <section class="about-section">
+          <h3>Scan modes</h3>
+          <ul class="about-list">
+            <li><strong>API Only</strong> — fastest; queries intelligence APIs only. Best for a quick breach check.</li>
+            <li><strong>Hybrid</strong> — APIs + search engine + ethical scraping of returned URLs. The recommended default.</li>
+            <li><strong>Deep Scan</strong> — same as Hybrid but with higher per-source limits for broader coverage.</li>
+            <li><strong>Extended Exploration</strong> — recursive mode: newly discovered identifiers (linked emails, usernames) are automatically fed back into the pipeline for follow-up scans.</li>
+            <li><strong>Compare All Modes</strong> — runs all four modes and shows side-by-side coverage metrics.</li>
+          </ul>
+        </section>
+
+        <section class="about-section">
+          <h3>Privacy &amp; ethics</h3>
+          <p>
+            Affectra is designed to be used only on data that belongs to you.
+            Every external source queried is a publicly accessible internet
+            service. The tool respects <code>robots.txt</code>, applies
+            per-host rate limiting, and never stores your input beyond the
+            duration of a scan session. Mitigation steps include GDPR
+            Article&nbsp;17 deletion email templates where applicable, giving
+            you a direct path to request removal of your data from each source.
+          </p>
+        </section>
+
+        <section class="about-section about-section-last">
+          <h3>Academic context</h3>
+          <p>
+            This project was submitted as a Final Year Project for the
+            BSc&nbsp;Computer Science programme at the University of
+            Hertfordshire (2026). It demonstrates applied knowledge of
+            REST API design, asynchronous multi-source data aggregation,
+            NLP-assisted risk classification, and privacy-by-design principles.
+          </p>
+          <div class="about-author">
+            <p><strong>Abdul Haseeb Amir</strong></p>
+            <p>Student ID: 24106309 &middot; BSc Computer Science</p>
+            <p>University of Hertfordshire</p>
+            <p><a href="mailto:haseeb.edu.7@gmail.com">haseeb.edu.7@gmail.com</a></p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
