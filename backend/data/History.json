@@ -1,0 +1,1017 @@
+{
+  "scans": [
+    {
+      "id": "1777142784065",
+      "timestamp": "2026-04-25T18:46:24.065Z",
+      "query": {
+        "email": "bs317k@gmail.com",
+        "full_name": "muhammad bilal saqib",
+        "phone": "",
+        "usernames": "bilalwithacamera",
+        "mode": "HYBRID"
+      },
+      "summary": {
+        "total_exposures": 7,
+        "by_category": {
+          "social_trace": 6,
+          "forum_mention": 1
+        },
+        "by_risk_level": {
+          "medium": 7
+        },
+        "overall_risk_level": "low",
+        "overall_risk_score": 26.37,
+        "hygiene_score": 73.6
+      },
+      "metadata": {
+        "scan_id": "f6edb42f-85c8-49a5-9890-bba930613570",
+        "scan_mode": "HYBRID",
+        "started_at": "2026-04-25T18:45:34.067164Z",
+        "completed_at": "2026-04-25T18:46:24.054629Z",
+        "runtime_delta_ms": 49987.47,
+        "sources_checked": 21,
+        "pages_scanned": 0,
+        "api_calls_made": 119,
+        "matches_found": 7,
+        "recursion_depth_reached": 0,
+        "apis_attempted": 10,
+        "apis_succeeded": 10,
+        "apis_skipped": 0,
+        "errors": [
+          "Psbdmp: psbdmp: request failed for query 'bs317k@gmail.com' -- [Errno 8] nodename nor servname provided, or not known",
+          "Psbdmp: psbdmp: request failed for query 'bilalwithacamera' -- [Errno 8] nodename nor servname provided, or not known",
+          "crt.sh: crt.sh HTTP error: [Errno 54] Connection reset by peer",
+          "Holehe: nextpvr: timeout after 8s",
+          "Holehe: crevado: timeout after 8s",
+          "Holehe: archive: timeout after 8s",
+          "Wayback Machine: Wayback CDX timed out for query: email domain (gmail.com)",
+          "Wayback Machine: Wayback CDX timed out for query: email literal (bs317k@gmail.com)",
+          "Wayback Machine: Wayback CDX timed out for query: full name slug (muhammad+bilal+saqib)",
+          "Wayback Machine: Wayback CDX timed out for query: full name slug (muhammad-bilal-saqib)",
+          "Wayback Machine: Wayback CDX timed out for query: username (bilalwithacamera)"
+        ]
+      },
+      "results": [
+        {
+          "id": "22b7bb5c4f662568",
+          "source_type": "api",
+          "source_name": "Holehe — wordpress",
+          "source_url": "https://wordpress.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "wordpress"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on wordpress.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 7B331839A891\n\nDear wordpress.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 7B331839A891\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://wordpress.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "e367560b31e519a2",
+          "source_type": "api",
+          "source_name": "Holehe — freelancer",
+          "source_url": "https://freelancer.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "freelancer"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on freelancer.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 9DE1FDF3A423\n\nDear freelancer.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 9DE1FDF3A423\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://freelancer.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "2ebcdb9da95c6f63",
+          "source_type": "api",
+          "source_name": "Holehe — spotify",
+          "source_url": "https://spotify.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "spotify"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on spotify.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref F1F5B19F8063\n\nDear spotify.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : F1F5B19F8063\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://spotify.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "3487f46038882e32",
+          "source_type": "api",
+          "source_name": "Holehe — replit",
+          "source_url": "https://replit.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "replit"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on replit.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref ACF10A0C151C\n\nDear replit.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : ACF10A0C151C\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://replit.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "4214778e4db88ad6",
+          "source_type": "api",
+          "source_name": "Holehe — twitter",
+          "source_url": "https://twitter.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "twitter"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on twitter.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 22AA647E7F76\n\nDear twitter.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 22AA647E7F76\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://twitter.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "4057feea3175c5dc",
+          "source_type": "api",
+          "source_name": "Holehe — firefox",
+          "source_url": "https://firefox.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "firefox"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on firefox.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref A05962648B6A\n\nDear firefox.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : A05962648B6A\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://firefox.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "e5f2242958b200ed",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/28585789/muhammad-bilal-saqib",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Muhammad Bilal Saqib"
+          },
+          "snippet": "Name: Muhammad Bilal Saqib; Reputation: 1",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 1C63FB8F2EDC\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 1C63FB8F2EDC\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/28585789/muhammad-bilal-saqib\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Muhammad Bilal Saqib\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        }
+      ]
+    },
+    {
+      "id": "1777142607234",
+      "timestamp": "2026-04-25T18:43:27.234Z",
+      "query": {
+        "email": "bs317k@gmail.com",
+        "full_name": "muhammad bilal saqib",
+        "phone": "",
+        "usernames": "",
+        "mode": "HYBRID"
+      },
+      "summary": {
+        "total_exposures": 7,
+        "by_category": {
+          "social_trace": 6,
+          "forum_mention": 1
+        },
+        "by_risk_level": {
+          "medium": 7
+        },
+        "overall_risk_level": "low",
+        "overall_risk_score": 27.47,
+        "hygiene_score": 72.5
+      },
+      "metadata": {
+        "scan_id": "054c95d1-aa53-45ef-b25d-76d1c354438c",
+        "scan_mode": "HYBRID",
+        "started_at": "2026-04-25T18:42:51.554620Z",
+        "completed_at": "2026-04-25T18:43:27.210371Z",
+        "runtime_delta_ms": 35655.75,
+        "sources_checked": 17,
+        "pages_scanned": 0,
+        "api_calls_made": 115,
+        "matches_found": 7,
+        "recursion_depth_reached": 0,
+        "apis_attempted": 10,
+        "apis_succeeded": 10,
+        "apis_skipped": 0,
+        "errors": [
+          "Psbdmp: psbdmp: request failed for query 'bs317k@gmail.com' -- [Errno 8] nodename nor servname provided, or not known",
+          "crt.sh: crt.sh HTTP error: [Errno 54] Connection reset by peer",
+          "Holehe: nextpvr: timeout after 8s",
+          "Wayback Machine: Wayback CDX HTTP 403 for query: email domain (gmail.com)",
+          "Wayback Machine: Wayback CDX timed out for query: email literal (bs317k@gmail.com)",
+          "Wayback Machine: Wayback CDX timed out for query: full name slug (muhammad+bilal+saqib)",
+          "Wayback Machine: Wayback CDX timed out for query: full name slug (muhammad-bilal-saqib)"
+        ]
+      },
+      "results": [
+        {
+          "id": "22b7bb5c4f662568",
+          "source_type": "api",
+          "source_name": "Holehe — wordpress",
+          "source_url": "https://wordpress.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "wordpress"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on wordpress.",
+          "classification": "social_trace",
+          "confidence_score": 83,
+          "confidence_level": "high",
+          "risk_score": 30.53,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 5D935A9AF2DB\n\nDear wordpress.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 5D935A9AF2DB\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://wordpress.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "e367560b31e519a2",
+          "source_type": "api",
+          "source_name": "Holehe — freelancer",
+          "source_url": "https://freelancer.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "freelancer"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on freelancer.",
+          "classification": "social_trace",
+          "confidence_score": 83,
+          "confidence_level": "high",
+          "risk_score": 30.53,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref F35A09E9EC25\n\nDear freelancer.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : F35A09E9EC25\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://freelancer.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "2ebcdb9da95c6f63",
+          "source_type": "api",
+          "source_name": "Holehe — spotify",
+          "source_url": "https://spotify.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "spotify"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on spotify.",
+          "classification": "social_trace",
+          "confidence_score": 83,
+          "confidence_level": "high",
+          "risk_score": 30.53,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 9AED267D272D\n\nDear spotify.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 9AED267D272D\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://spotify.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "3487f46038882e32",
+          "source_type": "api",
+          "source_name": "Holehe — replit",
+          "source_url": "https://replit.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "replit"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on replit.",
+          "classification": "social_trace",
+          "confidence_score": 83,
+          "confidence_level": "high",
+          "risk_score": 30.53,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 20AEBACD4909\n\nDear replit.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 20AEBACD4909\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://replit.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "4214778e4db88ad6",
+          "source_type": "api",
+          "source_name": "Holehe — twitter",
+          "source_url": "https://twitter.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "twitter"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on twitter.",
+          "classification": "social_trace",
+          "confidence_score": 83,
+          "confidence_level": "high",
+          "risk_score": 30.53,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 4C8378796C8F\n\nDear twitter.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 4C8378796C8F\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://twitter.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "4057feea3175c5dc",
+          "source_type": "api",
+          "source_name": "Holehe — firefox",
+          "source_url": "https://firefox.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "bs317k@gmail.com",
+            "site": "firefox"
+          },
+          "snippet": "Email 'bs317k@gmail.com' is registered on firefox.",
+          "classification": "social_trace",
+          "confidence_score": 83,
+          "confidence_level": "high",
+          "risk_score": 30.53,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 1669C345C74D\n\nDear firefox.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 1669C345C74D\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://firefox.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: bs317k@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "e5f2242958b200ed",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/28585789/muhammad-bilal-saqib",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Muhammad Bilal Saqib"
+          },
+          "snippet": "Name: Muhammad Bilal Saqib; Reputation: 1",
+          "classification": "forum_mention",
+          "confidence_score": 60,
+          "confidence_level": "medium",
+          "risk_score": 30.4,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref C16814D20DEB\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : C16814D20DEB\nDate of request : 2026-04-25\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/28585789/muhammad-bilal-saqib\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Muhammad Bilal Saqib\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nMuhammad Bilal Saqib",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        }
+      ]
+    },
+    {
+      "id": "1776968466092",
+      "timestamp": "2026-04-23T18:21:06.092Z",
+      "query": {
+        "email": "dde.aha2003@gmail.com",
+        "full_name": "Abdul Haseeb",
+        "phone": "03322960707",
+        "usernames": "",
+        "mode": "HYBRID"
+      },
+      "summary": {
+        "total_exposures": 12,
+        "by_category": {
+          "social_trace": 4,
+          "forum_mention": 8
+        },
+        "by_risk_level": {
+          "medium": 12
+        },
+        "overall_risk_level": "low",
+        "overall_risk_score": 26.32,
+        "hygiene_score": 73.7
+      },
+      "metadata": {
+        "scan_id": "d06b2851-c9f3-4c59-8a9d-0ada424fda91",
+        "scan_mode": "HYBRID",
+        "started_at": "2026-04-23T18:20:45.224108Z",
+        "completed_at": "2026-04-23T18:21:06.070291Z",
+        "runtime_delta_ms": 20846.19,
+        "sources_checked": 15,
+        "pages_scanned": 0,
+        "api_calls_made": 117,
+        "matches_found": 12,
+        "recursion_depth_reached": 0,
+        "apis_attempted": 10,
+        "apis_succeeded": 10,
+        "apis_skipped": 0,
+        "errors": [
+          "Psbdmp: psbdmp: request failed for query 'dde.aha2003@gmail.com' -- [Errno 8] nodename nor servname provided, or not known",
+          "crt.sh: crt.sh returned HTTP 502: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+          "Wayback Machine: Wayback CDX HTTP 403 for query: email domain (gmail.com)",
+          "Wayback Machine: Wayback CDX timed out for query: email literal (dde.aha2003@gmail.com)",
+          "Wayback Machine: Wayback CDX timed out for query: full name slug (abdul-haseeb)"
+        ]
+      },
+      "results": [
+        {
+          "id": "5c02ad589cf1c406",
+          "source_type": "api",
+          "source_name": "Holehe — spotify",
+          "source_url": "https://spotify.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "dde.aha2003@gmail.com",
+            "site": "spotify"
+          },
+          "snippet": "Email 'dde.aha2003@gmail.com' is registered on spotify.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 8FE51BF47B2F\n\nDear spotify.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 8FE51BF47B2F\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://spotify.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: dde.aha2003@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "fecbcea317dd4439",
+          "source_type": "api",
+          "source_name": "Holehe — replit",
+          "source_url": "https://replit.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "dde.aha2003@gmail.com",
+            "site": "replit"
+          },
+          "snippet": "Email 'dde.aha2003@gmail.com' is registered on replit.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref A26724AE48D7\n\nDear replit.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : A26724AE48D7\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://replit.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: dde.aha2003@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "d7702ec4489bd314",
+          "source_type": "api",
+          "source_name": "Holehe — amazon",
+          "source_url": "https://amazon.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "dde.aha2003@gmail.com",
+            "site": "amazon"
+          },
+          "snippet": "Email 'dde.aha2003@gmail.com' is registered on amazon.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref EC0D2E95B6DA\n\nDear amazon.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : EC0D2E95B6DA\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://amazon.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: dde.aha2003@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "3cf6b6d4df0f93cf",
+          "source_type": "api",
+          "source_name": "Holehe — twitter",
+          "source_url": "https://twitter.com",
+          "match_type": "exact",
+          "matched_fields": [
+            "email"
+          ],
+          "matched_data": {
+            "email": "dde.aha2003@gmail.com",
+            "site": "twitter"
+          },
+          "snippet": "Email 'dde.aha2003@gmail.com' is registered on twitter.",
+          "classification": "social_trace",
+          "confidence_score": 77,
+          "confidence_level": "high",
+          "risk_score": 29.31,
+          "risk_level": "medium",
+          "mitigation": [
+            "Review the platform's privacy settings and limit who can see each profile field.",
+            "Remove or obscure sensitive fields (phone, full name, location) from your public profile.",
+            "Consider whether maintaining a public presence on this platform is necessary.",
+            "Check that linked accounts (e.g. 'login with Google') don't expose more data than intended."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 124755A49AAE\n\nDear twitter.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 124755A49AAE\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://twitter.com\n\nThe following personal identifiers belonging to me are present at that location:\n  • email: dde.aha2003@gmail.com\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Holehe"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "46709a937b5ea2d6",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/1218926/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul Haseeb; Reputation: 863; Location: Calicut, Kerala, India; Website: http://hazeeb.me",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref A1E435376E31\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : A1E435376E31\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/1218926/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "83915d2dea8961ec",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/9049282/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul Haseeb; Reputation: 572; Location: Attock(43600), Punjab Pakistan",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 6EC6DA1BB664\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 6EC6DA1BB664\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/9049282/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "58a914cc7863e9ed",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/1796265/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul Haseeb; Reputation: 558; Location: Islamabad; Website: http://abdul-haseeb.com",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 186B09B0A776\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 186B09B0A776\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/1796265/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "1f3048d1e311e8ee",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/12438249/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul Haseeb; Reputation: 528; Location: Pakistan",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref CA91519D673D\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : CA91519D673D\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/12438249/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "9a6f81719a44acca",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/4130843/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul Haseeb; Reputation: 388",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref EA1598F741E9\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : EA1598F741E9\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/4130843/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "bd7738a4fbb89100",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/7180249/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul Haseeb; Reputation: 372",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 434365992674\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 434365992674\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/7180249/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "c76b6ad300e1c681",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/14240827/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul Haseeb; Reputation: 85",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 7324D78007F5\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 7324D78007F5\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/14240827/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        },
+        {
+          "id": "69525e5fa36dc567",
+          "source_type": "api",
+          "source_name": "stack_exchange",
+          "source_url": "https://stackoverflow.com/users/808157/abdul-haseeb",
+          "match_type": "partial",
+          "matched_fields": [
+            "full_name"
+          ],
+          "matched_data": {
+            "full_name": "Abdul Haseeb"
+          },
+          "snippet": "Name: Abdul HaSeeB; Reputation: 81",
+          "classification": "forum_mention",
+          "confidence_score": 54,
+          "confidence_level": "medium",
+          "risk_score": 28.96,
+          "risk_level": "medium",
+          "mitigation": [
+            "Ask the forum moderators to redact or anonymise your personal data in the post.",
+            "If the account is yours, edit or delete the post directly.",
+            "Contact the platform's privacy team if moderation does not resolve it.",
+            "Request de-indexing from Google using 'Remove Outdated Content' once the post is gone."
+          ],
+          "deletion_email_template": "Subject: Personal Data Erasure Request — Ref 936464EA6439\n\nDear stackoverflow.com Data Controller,\n\nI am writing to formally request the erasure of my personal data from your\nservice under Article 17 of the UK/EU General Data Protection Regulation\n(GDPR) and/or the California Consumer Privacy Act (CCPA §1798.105), where\napplicable.\n\nReference ID : 936464EA6439\nDate of request : 2026-04-23\n\nThe specific URL where my information appears:\n  https://stackoverflow.com/users/808157/abdul-haseeb\n\nThe following personal identifiers belonging to me are present at that location:\n  • full_name: Abdul Haseeb\n\nPlease confirm receipt of this request and the actions you will take to\npermanently remove the listed data. Under the GDPR you are required to\nrespond within 30 calendar days of receipt.\n\nIf you require proof of identity before processing this request, please\nadvise on your preferred verification method.\n\nYours sincerely,\nAbdul Haseeb",
+          "discovered_in_round": 0,
+          "confirmed_by": [
+            "Stack Exchange"
+          ],
+          "source_count": 1
+        }
+      ]
+    },
+    {
+      "id": "1776964088990",
+      "timestamp": "2026-04-23T17:08:08.990Z",
+      "query": {
+        "email": "mianmustafanawaz@gmail.com",
+        "full_name": "",
+        "phone": "",
+        "usernames": "",
+        "mode": "HYBRID"
+      },
+      "summary": {
+        "total_exposures": 0,
+        "by_category": {},
+        "by_risk_level": {},
+        "overall_risk_level": "low",
+        "overall_risk_score": 0,
+        "hygiene_score": 100
+      },
+      "metadata": {
+        "scan_id": "310a280f-4b63-42fb-805f-4e835ef2ba75",
+        "scan_mode": "HYBRID",
+        "started_at": "2026-04-23T17:07:55.117694Z",
+        "completed_at": "2026-04-23T17:08:08.977817Z",
+        "runtime_delta_ms": 13860.11,
+        "sources_checked": 8,
+        "pages_scanned": 0,
+        "api_calls_made": 111,
+        "matches_found": 0,
+        "recursion_depth_reached": 0,
+        "apis_attempted": 10,
+        "apis_succeeded": 10,
+        "apis_skipped": 0,
+        "errors": [
+          "Psbdmp: psbdmp: request failed for query 'mianmustafanawaz@gmail.com' -- [Errno 8] nodename nor servname provided, or not known",
+          "Wayback Machine: Wayback CDX HTTP 403 for query: email domain (gmail.com)"
+        ]
+      },
+      "results": []
+    }
+  ]
+}
